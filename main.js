@@ -20,5 +20,30 @@ $dayOfWeekContainer.addEventListener('click', function (event) {
 });
 
 $form.addEventListener('submit', function (event) {
-  // console.log('hello');
+  event.preventDefault();
+  var entryData = {
+
+  };
 });
+
+function renderEntry(entry) {
+  var $td1 = document.createElement('td');
+  var $td2 = document.createElement('td');
+  var $tr = document.createElement('tr');
+
+  $tr.appendChild($td1);
+  $tr.appendChild($td2);
+
+  return $tr;
+}
+
+window.addEventListener('DOMContentLoaded', createDomTree);
+
+function createDomTree() {
+  if (data.entries.length) {
+    for (var entry of data.entries) {
+      var $trEntry = renderEntry(entry);
+      $.appendChild($liEntry);
+    }
+  }
+}
