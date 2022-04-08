@@ -74,3 +74,14 @@ function createDomTree() {
     }
   }
 }
+
+function switchViewTo(targetPage) {
+  for (let i = 0; i < $views.length; i++) {
+    if ($views[i].getAttribute('data-view') === targetPage) {
+      $views[i].className = 'view';
+      data.view = targetPage;
+    } else {
+      $views[i].className = 'view hidden';
+    }
+  }
+}
