@@ -39,10 +39,15 @@
 }
 
 .modal-content {
+  position: fixed;
+  z-index: 5;
+  left: 50%;
+  top: 50%;
+  background-color: white;
   width: 500px;
   height: 350px;
   border: 2px red solid;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .textarea {
