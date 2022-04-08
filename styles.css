@@ -39,7 +39,17 @@
 }
 
 .modal-content {
-  width: 450px;
+  width: 800px;
   height: 350px;
   border: 2px red solid;
+  margin: auto;
+}
+
+.textarea {
+  width: 24rem;
+  height: 4rem;
+}
+
+h2 {
+  text-align: center;
 }
