@@ -27,7 +27,9 @@ $dayOfWeekContainer.addEventListener('click', function (event) {
 $form.addEventListener('submit', function (event) {
   event.preventDefault();
   var entryData = {
-
+    time: event.target.elements.,
+    day:
+    description:
   };
 });
 
