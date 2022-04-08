@@ -14,7 +14,11 @@ var $tbody = document.querySelector('.tbody');
 $addEntryBtn.addEventListener('click', function () {
   $overlay.classList.remove('hidden');
   $modalContent.classList.remove('hidden');
+});
 
+$submitBtn.addEventListener('click', function () {
+  $overlay.classList.add('hidden');
+  $modalContent.classList.add('hidden');
 });
 
 $dayOfWeekContainer.addEventListener('click', function (event) {
@@ -27,10 +31,16 @@ $dayOfWeekContainer.addEventListener('click', function (event) {
 $form.addEventListener('submit', function (event) {
   event.preventDefault();
   var entryData = {
-    time: event.target.elements.,
-    day:
-    description:
+    time: $form.elements.time.value,
+    day: $form.elements.days.value,
+    description: $form.elements.description.value
   };
+  data.entries.unshift(entryData);
+  $tbody.prepend(renderEntry(entryData));
+  // console.log(entryData);
+  // console.log($form.elements.days.value);
+  // console.log($form.elements.time.value);
+  // console.log($form.elements.description.value);
 });
 
 function renderEntry(entry) {

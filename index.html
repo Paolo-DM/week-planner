@@ -48,7 +48,7 @@
         <h2>Add Entry</h2>
         <div class="row">
           <div class="column-half justify-content-space-around">
-            <select>
+            <select name="days">
               <option>Day of Week</option>
               <option>Sunday</option>
               <option>Monday</option>
@@ -58,7 +58,7 @@
               <option>Friday</option>
               <option>Saturday</option>
             </select>
-            <select class="time">
+            <select class="time" name="time">
               <option value="12:00">12:00 AM</option>
               <option value="1:00">1:00 AM</option>
               <option value="2:00">2:00 AM</option>
@@ -87,7 +87,7 @@
           </div>
         </div>
         <div class="row margin-top">
-          <textarea class="textarea" placeholder="Description"></textarea>
+          <textarea class="textarea" placeholder="Description" name="description"></textarea>
         </div>
         <div class="row justify-content-flex-end margin-top">
           <button class="submit-btn" type="submit">Submit</button>
