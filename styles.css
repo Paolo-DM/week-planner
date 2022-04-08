@@ -40,7 +40,7 @@
 
 .modal-content {
   position: fixed;
-  z-index: 5;
+  z-index: 3;
   left: 50%;
   top: 50%;
   background-color: white;
@@ -48,6 +48,7 @@
   height: 350px;
   border: 2px red solid;
   margin: 0 auto;
+  transform: translate(-50%, -50%);
 }
 
 .textarea {
@@ -57,4 +58,8 @@
 
 h2 {
   text-align: center;
+}
+
+tr:nth-child(odd) {
+  background-color: lightgrey;
 }
