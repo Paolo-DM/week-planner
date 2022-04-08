@@ -1,6 +1,11 @@
-button {
+.button-add-entry {
   width: 120px;
   height: 30px;
-  background-color: lightblue;
+  background-color: white;
   box-shadow: 1px 5px 5px 1px black;
+}
+
+.button-add-entry:hover {
+  background-color: lightblue;
+  cursor: pointer;
 }
