@@ -7,6 +7,14 @@
   display: flex;
 }
 
+.column-half {
+  width: 50%;
+}
+
+.margin-top {
+  margin-top: 10px;
+}
+
 .justify-content-center {
   justify-content: center;
 }
@@ -17,4 +25,13 @@
 
 .justify-content-flex-end {
   justify-content: flex-end;
+}
+
+.modal-content-container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
 }
