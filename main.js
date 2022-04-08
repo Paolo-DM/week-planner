@@ -12,14 +12,20 @@ var $form = document.querySelector('form');
 var $tbody = document.querySelector('.tbody');
 
 $addEntryBtn.addEventListener('click', function () {
-  $overlay.classList.remove('hidden');
-  $modalContent.classList.remove('hidden');
+  showModal();
 });
 
-$submitBtn.addEventListener('click', function () {
+function showModal() {
+  $overlay.classList.remove('hidden');
+  $modalContent.classList.remove('hidden');
+}
+
+// $overlay.classList.toggle()
+
+function hideModal() {
   $overlay.classList.add('hidden');
   $modalContent.classList.add('hidden');
-});
+}
 
 $dayOfWeekContainer.addEventListener('click', function (event) {
   if (event.target.nodeName === 'BUTTON') {
@@ -37,6 +43,7 @@ $form.addEventListener('submit', function (event) {
   };
   data.entries.unshift(entryData);
   $tbody.prepend(renderEntry(entryData));
+  hideModal();
   // console.log(entryData);
   // console.log($form.elements.days.value);
   // console.log($form.elements.time.value);
@@ -45,7 +52,10 @@ $form.addEventListener('submit', function (event) {
 
 function renderEntry(entry) {
   var $td1 = document.createElement('td');
+  $td1.innerHTML = entry.time;
   var $td2 = document.createElement('td');
+  $td2.textContent = entry.description;
+  console.log($td2);
   var $tr = document.createElement('tr');
 
   $tr.appendChild($td1);
