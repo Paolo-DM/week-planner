@@ -1,3 +1,7 @@
+/* eslint - disable no - global - assign */
+/* global data */
+/*  exported data */
+
 var $submitBtn = document.querySelector('.submit-btn');
 var $addEntryBtn = document.querySelector('.button-add-entry');
 var $overlay = document.querySelector('.overlay');
@@ -5,6 +9,7 @@ var $modalContent = document.querySelector('.modal-content');
 var $dayOfWeekContainer = document.querySelector('.day-of-week-container');
 var $selectedDay = document.querySelector('.selected-day');
 var $form = document.querySelector('form');
+var $tbody = document.querySelector('.tbody');
 
 $addEntryBtn.addEventListener('click', function () {
   $overlay.classList.remove('hidden');
@@ -43,7 +48,7 @@ function createDomTree() {
   if (data.entries.length) {
     for (var entry of data.entries) {
       var $trEntry = renderEntry(entry);
-      $.appendChild($liEntry);
+      $tbody.appendChild($trEntry);
     }
   }
 }
